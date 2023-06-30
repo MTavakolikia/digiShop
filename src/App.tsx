@@ -3,6 +3,7 @@ import apiClient from './services/api-client';
 import { useQuery } from '@tanstack/react-query'
 import { Card, CardActionArea, CardMedia, CardContent, Typography, Grid } from '@mui/material';
 import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
 
 interface IProducts {
   id: number;
@@ -23,6 +24,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <HeroSection />
       <Grid container spacing={{ xs: 2, md: 3 }} justifyContent="center" columns={{ xs: 4, sm: 8, md: 12 }}>
         {data?.map(product => (
           <Grid key={product.id} item>
